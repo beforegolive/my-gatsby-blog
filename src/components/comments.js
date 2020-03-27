@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Gitalk from 'gitalk'
+import Gitalk from 'twomeetings-gitalk'
 import 'gitalk/dist/gitalk.css'
 
 export class Comments extends Component {

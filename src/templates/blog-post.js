@@ -75,7 +75,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 					</li>
 				</ul>
 			</nav>
-			<div>自定义评论</div>
 			<Comments />
 		</Layout>
 	)
