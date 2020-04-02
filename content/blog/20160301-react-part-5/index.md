@@ -108,7 +108,7 @@ InputButton.defaultProps = { initialCount: 0 };
 ```
 
 #### propTypes的写法
-在[此系列文章第一篇](http://twomeetings.github.io/2016/02/10/React%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E4%B9%8B%E4%B8%80%EF%BC%8D%E5%BC%80%E7%AF%87/)我们提到了propTypes，它可以对组件所需要的属性做验证，从而让组件的调用方了解如何正确使用该组件，当时的React写法是：
+在[此系列文章第一篇](/20150712-react-part-1))我们提到了propTypes，它可以对组件所需要的属性做验证，从而让组件的调用方了解如何正确使用该组件，当时的React写法是：
 
 ```
 propTypes:{
@@ -126,7 +126,7 @@ InputButton.propTypes = {
 ```
 
 #### 对mixin的支持
-[上篇文章](http://twomeetings.github.io/2016/03/06/React%E7%B3%BB%E5%88%97%E4%B9%8B%E5%9B%9B%EF%BC%8Dref%E5%92%8Cmixin/)中，我们用React写法创建的组件中通过设置mixins属性，添加了mixin功能，让两个不相干的类之间也能共享属性和方法。
+[上篇文章](/20160104-react-part-4)中，我们用React写法创建的组件中通过设置mixins属性，添加了mixin功能，让两个不相干的类之间也能共享属性和方法。
 
 ```
 var InputButton=React.createClass({

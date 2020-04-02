@@ -5,7 +5,7 @@ date: "2016-03-28"
 
 在React中有一种常用的的设计模式，就是将组件分为呈现组件(presentatial component)和容器组件(container component),它们和MVC框架概念中的V和C很相似，呈现组件只负责呈现数据，而容器组件负责逻辑的处理。
 
-现在我们创建一个示例，像[系列文章第三篇](http://twomeetings.github.io/2016/03/03/React%E7%B3%BB%E5%88%97%E4%B9%8B%E4%B8%89%EF%BC%8D%E4%BA%8B%E4%BB%B6/)的例子那样调用豆瓣图书API获取信息，然后将信息呈现在页面上。首先，我们将所有逻辑写在一起，创建index.js，内容如下：
+现在我们创建一个示例，像[系列文章第三篇](/20151108-react-part-3)的例子那样调用豆瓣图书API获取信息，然后将信息呈现在页面上。首先，我们将所有逻辑写在一起，创建index.js，内容如下：
 
 ```
 import React, { Component} from 'react'
@@ -77,7 +77,7 @@ render(){
 
 这样做可以让呈现组件能复用在其他地方，假如呈现逻辑改变了，直接替换掉呈现组件就可以了，这也一定程度上保证了容器组件的复用。
 
-而且，由于将呈现逻辑抽离，呈现组件内部不需要用到state或其他复杂的功能，正好适用[前文提过的stateless写法](http://twomeetings.github.io/2016/03/20/React%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E4%B9%8B%E5%85%AD%EF%BC%8Dstateless%E5%86%99%E6%B3%95/)，从而进一步减少代码量，提高效率。比如此处BookListPresentation可改写为如下内容：
+而且，由于将呈现逻辑抽离，呈现组件内部不需要用到state或其他复杂的功能，正好适用[前文提过的stateless写法](/20160316-react-part-6)，从而进一步减少代码量，提高效率。比如此处BookListPresentation可改写为如下内容：
 
 ```
 var BookListPresentation = ({ books })=>

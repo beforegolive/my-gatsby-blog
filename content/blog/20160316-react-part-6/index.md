@@ -6,7 +6,7 @@ date: "2016-03-16"
 ### 函数就是stateless组件
 前文介绍了编写react组件的两种写法，React写法和ES6写法，除此之外还有一种编写组件的写法，而这种写法编写的组件会略有不同，这样的组件叫stateless组件。顾名思义，stateless组件就是没有状态的组件，这种组件的写法基本等同于javascript的函数，函数的参数就是组件的props属性。
 
-现在我们用这种写法重写[系列文章第一篇](http://twomeetings.github.io/2016/02/10/React%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E4%B9%8B%E4%B8%80%EF%BC%8D%E5%BC%80%E7%AF%87/)的示例，添加index.js文件，内容如下：
+现在我们用这种写法重写[系列文章第一篇](/20150712-react-part-1)的示例，添加index.js文件，内容如下：
 
 ```
 import React from 'react'
@@ -24,7 +24,7 @@ ReactDOM.render(
 
 代码中可以看到，HelloMessage组件就是函数HelloMessage，函数的返回值就是组件要呈现的内容，等同于组件的render方法。与返回值与以往函数的区别是：字符串作为其返回值不是用引号包裹，而是括号。
 
-函数的参数就是组件的props，而这种组件不支持state，这也是组件名称的由来。除此之外，这种组件不支持ref属性，没有组件生命周期相关的事件方法，但支持propTypes，写法和[ES6组件写法](http://twomeetings.github.io/2016/03/11/React%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E4%B9%8B%E4%BA%94%EF%BC%8D%E7%BB%84%E4%BB%B6%E7%9A%84%E5%8F%A6%E5%A4%96%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95/)一样。
+函数的参数就是组件的props，而这种组件不支持state，这也是组件名称的由来。除此之外，这种组件不支持ref属性，没有组件生命周期相关的事件方法，但支持propTypes，写法和[ES6组件写法](/20160301-react-part-5))一样。
 
 ```
 HelloMessage.propType = { name: Proptypes.string.isRequired}

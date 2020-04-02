@@ -40,7 +40,7 @@ ReactDOM.render(
 )
 ```
 ### state初始化
-从代码中可以看出，UserInput组件和[上一篇](http://twomeetings.github.io/2016/02/10/React%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E4%B9%8B%E4%B8%80%EF%BC%8D%E5%BC%80%E7%AF%87/)的例子相比，多了getInitialState方法，该方法通过返回一个对象来初始化state，最终对象的属性和state属性一致。
+从代码中可以看出，UserInput组件和[上一篇](/20150712-react-part-1)的例子相比，多了getInitialState方法，该方法通过返回一个对象来初始化state，最终对象的属性和state属性一致。
 
 ```
 getInitialState(){

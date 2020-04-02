@@ -8,7 +8,7 @@ React是Facebook公司创建的框架，起始于2011年，起初只在其公司
 
 到我写下这篇文章为止，不到短短一年时间，react相关的框架正逐渐改变手机端开发的格局。利用react native编写的javascript代码可以同时跑在苹果和安卓系统上，根据facebook官方博客描述的广告项目中，80%的代码可以重用。学习React无疑为前端开发人员拓宽了职业道路。
 
-本系列相关的示例代码使用webpack＋react的架构，详细的配置和搭建步骤可以参考[Webpack系列文章的这一篇](http://twomeetings.github.io/2016/02/26/webpack%E7%B3%BB%E5%88%97%E4%B9%8B%E4%BA%94%EF%BC%8Dreact%E9%A1%B9%E7%9B%AE/)，本文不再赘述。
+本系列相关的示例代码使用webpack＋react的架构，详细的配置和搭建步骤可以参考[Webpack系列文章的这一篇](/20160108-webpack-part-1)，本文不再赘述。
 
 ### 属性props
 

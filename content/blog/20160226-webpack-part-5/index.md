@@ -39,7 +39,7 @@ module.exports={
 };
 ```
 
-> 配置文件内各节点的含义可查阅[系列文章第二篇](http://twomeetings.github.io/2016/01/15/webpack%E7%B3%BB%E5%88%97%E4%BA%8C%20%EF%BC%8D%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/)
+> 配置文件内各节点的含义可查阅[系列文章第二篇](/20160115-webpack-part-2)
 
 ### 安装react相关的组件
 
@@ -95,7 +95,7 @@ ReactDOM.render(
 )	
 ```
 
-现在只需一个包含id为react-div元素的html页面就可以看到最终效果，我们可以手动添加，也可以利用[系列文章第三篇](http://twomeetings.github.io/2016/01/19/webpack%E7%B3%BB%E5%88%97%E4%B9%8B%E4%B8%89%EF%BC%8Dplugin%E6%8F%92%E4%BB%B6/)中谈及的模板插件来创建页面。
+现在只需一个包含id为react-div元素的html页面就可以看到最终效果，我们可以手动添加，也可以利用[系列文章第三篇](/20160119-webpack-part-3)中谈及的模板插件来创建页面。
 
 ### 模版插件添加HTML页面
 安装模版插件html-webpack-plugin，因为其依赖webpack，所以要一并安装，执行命令如下：

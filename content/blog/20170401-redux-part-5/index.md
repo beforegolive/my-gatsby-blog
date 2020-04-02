@@ -6,7 +6,7 @@ date: '2017-04-01'
 react-redux组件是React和Redux两个框架的粘合剂，它共有两个部分：Provider组件和connect方法。上篇已介绍了Provider组件，本文就来详细讲解connect方法。
 
 ### connect方法
-在[React系列之七](http://twomeetings.github.io/2016/03/29/React%E7%B3%BB%E5%88%97%E4%B9%8B%E4%B8%83%EF%BC%8D%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/)中说到了一种设计模式－呈现组件和容器组件。简单来说，呈现组件只通过传入的属性负责呈现逻辑，而跟state相关的数据改动都放到容器组件中。connect方法就是为这种模式而生，它可以通过呈现组件快速生成容器组件。
+在[React系列之七](/20160328-react-part-7)中说到了一种设计模式－呈现组件和容器组件。简单来说，呈现组件只通过传入的属性负责呈现逻辑，而跟state相关的数据改动都放到容器组件中。connect方法就是为这种模式而生，它可以通过呈现组件快速生成容器组件。
 
 connect方法有4个参数，通常只会用到前两个，参数类型都是函数。假设现在已有一个呈现组件叫BookList, 那么connect的使用方法如下：
 
@@ -28,11 +28,11 @@ var container = connect(mapStateToProps, mapDispatchToProps)(BookList)
 
 这两点恰恰是容器组件要做的事，所以connect方法其实就是通过呈现组件快速生成容器组件的快捷方式。
 
-> 关于action creator和dispatch的组合可参考[Redux系列之三](http://twomeetings.github.io/2016/04/19/Redux%E7%B3%BB%E5%88%97%E4%B9%8B%E4%B8%89%EF%BC%8DbindActionCreator/)中，对bindActionCreators的描述。
+> 关于action creator和dispatch的组合可参考[Redux系列之三](/20170119-redux-part-3)中，对bindActionCreators的描述。
 
 ### 用connect方法改造示例
 
-这里我们用connect对[React系列文章之二](http://twomeetings.github.io/2016/02/20/React%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E4%B9%8B%E4%BA%8C%EF%BC%8DpropType/)中的例子做改造，该例中只有一个与颜色相关的下拉框，当用户选择后，state会保存选中的值。
+这里我们用connect对[React系列文章之二](/20170119-react-part-2)中的例子做改造，该例中只有一个与颜色相关的下拉框，当用户选择后，state会保存选中的值。
 
 ![](http://7xtbg7.com2.z0.glb.clouddn.com/redux5-1)
 
@@ -42,7 +42,7 @@ var container = connect(mapStateToProps, mapDispatchToProps)(BookList)
 npm install react-redux --save
 ```
 
-而[前文](http://twomeetings.github.io/2016/04/21/Redux%E7%B3%BB%E5%88%97%E4%B9%8B%E5%9B%9B%EF%BC%8D%E7%B2%98%E5%90%88%E5%89%82-react-redux%E7%BB%84%E4%BB%B6/)中说到redux将所有组件的state都存入了一个全局变量中，因此redux的重要作用之一就是容器组件的简单化。
+而前文中说到redux将所有组件的state都存入了一个全局变量中，因此redux的重要作用之一就是容器组件的简单化。
 
 我们现在将下拉框中的state相关代码剥离出来，只留下呈现的逻辑，代码如下：
 
@@ -170,7 +170,7 @@ ReactDOM.render(
 
 记得connect需要和Provider组件配合使用，因此PickerContainer必须被包裹在Provider中。
 
-> 关于Provider的使用说明可参考[上篇](http://twomeetings.github.io/2016/04/21/Redux%E7%B3%BB%E5%88%97%E4%B9%8B%E5%9B%9B%EF%BC%8D%E7%B2%98%E5%90%88%E5%89%82-react-redux%E7%BB%84%E4%BB%B6/)
+> 关于Provider的使用说明可参考[上篇](/20170302-redux-part-4)
 
 ### 结语
 react-redux组件的connect方法是通过呈现组件创建容器组件的一种快捷方式，它需要和Provider组件一起使用。

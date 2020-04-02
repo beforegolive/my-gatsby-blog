@@ -10,11 +10,11 @@ react-redux组件的用法很简单，只有两个部分：一个是Provider组�
 
 在前三篇的示例中，示例代码中使用了自定义的Counter组件，可这种组件是呈现组件，没有state相关的逻辑。然而有时，组件需要在内部操作state，无法通过props属性暴露给调用方，这就需要在redux框架下编写容器组件。
 
-> 关于呈现组件和容器组件的概念可参考[React系列文章之六](http://twomeetings.github.io/2016/03/20/React%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E4%B9%8B%E5%85%AD%EF%BC%8Dstateless%E5%86%99%E6%B3%95/)
+> 关于呈现组件和容器组件的概念可参考[React系列文章之六](/20160316-react-part-6)
 
 由于redux将所有组件的state都存放在全局变量Store中，因此，在Rudux框架下的容器组件写法也略有不同，需要将Store通过属性props来传入。
 
-在[React系列之二](http://twomeetings.github.io/2016/02/20/React%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E4%B9%8B%E4%BA%8C%EF%BC%8DpropType/)的示例中有一个下拉框，通过state保存用户对颜色的选择，代码如下：
+在[React系列之二](/20160316-react-part-6)的示例中有一个下拉框，通过state保存用户对颜色的选择，代码如下：
 
 ```
 var Picker= React.createClass({

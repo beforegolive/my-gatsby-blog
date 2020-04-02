@@ -18,7 +18,7 @@ React的开发需要配合一种前端框架来组织代码，使得项目能易
 ![](http://7xtbg7.com2.z0.glb.clouddn.com/redux1-2.png)
 
 ### 简易示例
-现在让我们用redux创建一个实例，比官方示例更加简单的计数器，内容是点击一下按钮，对应的数值加1。示例的框架使用了webpack＋react＋redux的形势，如果对webpack和react不熟悉，则可以先阅读我之前所写的[react系列文章](http://twomeetings.github.io/2016/05/08/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E6%96%87%E6%B1%87%E6%80%BB/)。
+现在让我们用redux创建一个实例，比官方示例更加简单的计数器，内容是点击一下按钮，对应的数值加1。示例的框架使用了webpack＋react＋redux的形势，如果对webpack和react不熟悉，则可以先阅读我之前所写的[react系列文章](/20150712-react-part-1)。
 
 搭建好项目，安装好webpack和react的相关的安装包后，要记得安装redux，命令如下：
 ```

@@ -14,7 +14,7 @@ Action是Redux中的核心概念之一，它是信息的载体包含跟操作指
 }
 ```
 
-发送指令需调用Store的方法dispatch，比如在[前文](http://twomeetings.github.io/2016/04/18/Redux%E7%B3%BB%E5%88%97%E4%B9%8B%E4%BA%8C%20%EF%BC%8D%20combineReducers/)的示例中，三个Counter组件通过dispatch分别发生了不同类别的指令：INCREMENT, OTHER_INCREMENT, DOUBLE_INCREMENT。相关代码如下：
+发送指令需调用Store的方法dispatch，比如在[前文](/20161104-redux-part-2)的示例中，三个Counter组件通过dispatch分别发生了不同类别的指令：INCREMENT, OTHER_INCREMENT, DOUBLE_INCREMENT。相关代码如下：
 
 ```
 		<Counter

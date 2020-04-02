@@ -4,7 +4,7 @@ date: "2016-01-04"
 ---
 
 ### React系列之四－扩展知识点ref和mixin
-在创建完组件后，我们常常需要获得对内部某个控件的值，比如说在[系列文章第二篇中](http://twomeetings.github.io/2016/02/20/React%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E4%B9%8B%E4%BA%8C%EF%BC%8DpropType/)，我们在下拉框的onChange事件中获取并保存了下拉框的值，而获取值的途径是通过方法参数的属性：event.target.value，代码如下。
+在创建完组件后，我们常常需要获得对内部某个控件的值，比如说在[系列文章第二篇中](/20150721-react-part-2)，我们在下拉框的onChange事件中获取并保存了下拉框的值，而获取值的途径是通过方法参数的属性：event.target.value，代码如下。
 
 ```
 _handleChange(event){
