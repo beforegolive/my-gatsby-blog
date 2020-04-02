@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
 
 const Layout = ({ location, title, children }) => {
+	useEffect(() => {
+		async function setHighlightCode() {
+			try {
+				const deckdeckgoHighlightCodeLoader = require('@deckdeckgo/highlight-code/dist/loader')
+
+				await deckdeckgoHighlightCodeLoader.defineCustomElements(window)
+			} catch (err) {
+				console.error(err)
+			}
+		}
+
+		setHighlightCode()
+	})
+
 	const rootPath = `${__PATH_PREFIX__}/`
 	let header
 
