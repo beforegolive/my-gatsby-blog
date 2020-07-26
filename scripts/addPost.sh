@@ -26,10 +26,10 @@ TARGET_FOLDER="content/blog/$PUBLISH_DATE-$TITLE"
 echo $TARGET_FOLDER
 mkdir -p $TARGET_FOLDER
 
-# cp $FILE_PATH "$TARGET_FOLDER/index.md" 
+CHINESE_TITLE=$(basename $FILE_PATH .md)
 
 echo "--- 
-title: '$TITLE' 
+title: '$CHINESE_TITLE' 
 date: '$PUBLISH_DATE'
 --- 
 " | cat - $FILE_PATH > "$TARGET_FOLDER/index.md"  
