@@ -10,6 +10,8 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
+            - run: git config user.email "2326220@163.com"
+            - run: git config user.name "twomeetings"
             - run: npm run deploy
 workflows:
     build-and-test:
