@@ -1,6 +1,12 @@
+--- 
+title: 'how-to-implement-resumable-upload' 
+date: '2020-06-11'
+--- 
+
 看过一道面试题要求实现断点续传，当时脑海大致想了一下实现思路，没完全想通，感觉涉及的知识点挺多，于是花了些时间用react和nodejs实现了一个简易版，并梳理了实现思路和用到的知识点。
 
 简单汇总，用到的知识点如下：
+
 1. 利用FileReader将上传文件切片
 2. 用MD5算法获取文件唯一性标识
 3. 用XHR显示上传进度
@@ -12,9 +18,11 @@
 ![chrome网络限速](https://user-gold-cdn.xitu.io/2020/6/11/172a060c655071e1?w=1338&h=510&f=png&s=179173)
 
 ### 前端部分
+
 框架选择上用了React作前端呈现，利用axois做网络请求，用js-md5来获取文件唯一性标识。
 
 #### 先说断点
+
 断点的基础是将文件分段，在web端可用[FileReader](https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader)类将文件以Buffer的形式读取，之后用原型链上的slice方法分段处理。
 
 ``` javascript
@@ -25,6 +33,7 @@ reader.readAsArrayBuffer(uploadedFile)
 此外，由于上传文件不通过html表单提交，在js端操作上传就需要使用FormData类来封装上传数据。
 
 #### 再说续传
+
 续传的前提是需要能识别出再次上传的文件是否与上一次相同，即必须先获取文件唯一性标识，其中MD5算法即可满足要求，因此我使用了第三方依赖js-md5。
 
 另外，续传开始时需要知道从哪开始续，我在后端提供一个api接口，通过文件md5的值查询对应文件的大小，然后由前端再次上传前调用，并比较计算出续传的开始位置。
