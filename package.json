@@ -41,7 +41,9 @@
   },
   "devDependencies": {
     "gatsby": "^2.24.11",
+    "gatsby-plugin-sass": "^2.3.12",
     "gh-pages": "^2.2.0",
+    "node-sass": "^4.14.1",
     "prettier": "^1.19.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",

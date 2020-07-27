@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
+import './layout.scss'
 
 const Layout = ({ location, title, children }) => {
 	useEffect(() => {
@@ -44,7 +45,7 @@ const Layout = ({ location, title, children }) => {
 		)
 	} else {
 		header = (
-			<h3
+			<h2
 				style={{
 					fontFamily: `Montserrat, sans-serif`,
 					marginTop: 0
@@ -60,7 +61,7 @@ const Layout = ({ location, title, children }) => {
 				>
 					{title}
 				</Link>
-			</h3>
+			</h2>
 		)
 	}
 	return (
@@ -68,13 +69,14 @@ const Layout = ({ location, title, children }) => {
 			style={{
 				marginLeft: `auto`,
 				marginRight: `auto`,
-				maxWidth: rhythm(24),
-				padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
+				maxWidth: rhythm(32),
+				padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
 			}}
+      className='post-container'
 		>
 			<header>{header}</header>
 			<main>{children}</main>
-			<footer>
+			<footer className='footer'>
 				© {new Date().getFullYear()}, Built with
 				{` `}
 				<a href="https://www.gatsbyjs.org">Gatsby</a>,{` `}

@@ -85,7 +85,8 @@ module.exports = {
 				siteid: '7d972948fda682a44dfb490ed2060bb6',
 				head: false
 			}
-		}
+    },
+    `gatsby-plugin-sass`
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
