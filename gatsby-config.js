@@ -1,6 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title: `Tech blog`,
+		title: `上线前夕`,
 		author: {
 			name: `许两会`,
 			summary: `生活和工作在深圳的前端工程师。作为一名工程师，总要表达点什么。`
@@ -50,7 +50,14 @@ module.exports = {
 					}
 				]
 			}
-		},
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`
+      }
+    },
 		`gatsby-plugin-feed`,
 		{
 			resolve: `gatsby-plugin-manifest`,
@@ -59,14 +66,7 @@ module.exports = {
 				background_color: `#ffffff`,
 				theme_color: `#663399`,
 				display: `minimal-ui`,
-        icon: `./content/assets/favicon.ico`
-			}
-		},
-		`gatsby-plugin-react-helmet`,
-		{
-			resolve: `gatsby-plugin-typography`,
-			options: {
-				pathToConfigModule: `src/utils/typography`
+        icon: `./content/assets/myLogo.jpeg`
 			}
 		},
 		{

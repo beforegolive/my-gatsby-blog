@@ -40,6 +40,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "@cloudbase/cli": "^0.9.0",
     "gatsby": "^2.24.11",
     "gatsby-plugin-sass": "^2.3.12",
     "gh-pages": "^2.2.0",
@@ -60,6 +61,7 @@
     "build": "gatsby build",
     "deploy": "npm run build && gh-pages -d public -b master -r git@github.com:twomeetings/twomeetings.github.io.git",
     "develop": "gatsby develop",
+    "deploy-tb": "NODE_ENV=production tcb hosting:deploy ./public/ -e myblog-2g4y35r1e15c5506",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
