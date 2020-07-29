@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 
+import Header from './header'
 import { rhythm, scale } from '../utils/typography'
 import './layout.scss'
 
@@ -70,11 +71,11 @@ const Layout = ({ location, title, children }) => {
 				marginLeft: `auto`,
 				marginRight: `auto`,
 				maxWidth: rhythm(32),
-				padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+				padding: `0 ${rhythm(1.5)} ${rhythm(3 / 4)}`,
 			}}
       className='post-container'
 		>
-			<header>{header}</header>
+      <Header></Header>
 			<main>{children}</main>
 			<footer className='footer'>
 				© {new Date().getFullYear()}, Built with

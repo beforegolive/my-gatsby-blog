@@ -42,3 +42,10 @@ deckgo-highlight-code {
 .footer{
   margin-top: 80px;
 }
+
+a{
+  color:#17632b;
+  &:hover{
+    opacity: 0.8;
+  }
+}
