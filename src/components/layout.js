@@ -5,7 +5,7 @@ import Header from './header'
 import { rhythm, scale } from '../utils/typography'
 import './layout.scss'
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ children }) => {
 	useEffect(() => {
 		async function setHighlightCode() {
 			try {
@@ -21,50 +21,6 @@ const Layout = ({ location, title, children }) => {
 	})
 
 	const rootPath = `${__PATH_PREFIX__}/`
-	let header
-
-	if (location.pathname === rootPath) {
-		header = (
-			<h1
-				style={{
-					...scale(1.5),
-					marginBottom: rhythm(1.5),
-					marginTop: 0
-				}}
-			>
-				<Link
-					style={{
-						boxShadow: `none`,
-						textDecoration: `none`,
-						color: `inherit`
-					}}
-					to={`/`}
-				>
-					{title}
-				</Link>
-			</h1>
-		)
-	} else {
-		header = (
-			<h2
-				style={{
-					fontFamily: `Montserrat, sans-serif`,
-					marginTop: 0
-				}}
-			>
-				<Link
-					style={{
-						boxShadow: `none`,
-						textDecoration: `none`,
-						color: `inherit`
-					}}
-					to={`/`}
-				>
-					{title}
-				</Link>
-			</h2>
-		)
-	}
 	return (
 		<div
 			style={{

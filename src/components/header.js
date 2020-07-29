@@ -25,12 +25,12 @@ const Header=()=>{
     <div className='left'>
       <img alt='my logo' src={myLogoImg} className='myLogo' onClick={() => window.location.href = '/'} />
       <div onClick={()=>window.location.href='/'}>首页</div>
-      <div>关于我</div>
+      <div onClick={() => window.location.href = '/profile'}>关于我</div>
     </div>
     <div className='right'>    
       <img alt='juejin profile' src={juejinImg} onClick={() => openNewTabAndJumpTo(juejinProfileUrl)} />
       <img alt='segmentfault profile' src={sfImg} onClick={() => openNewTabAndJumpTo(sfProfileUrl)} />
-      <img alt='weibo profile' src={weiboImg} onClick={() => openNewTabAndJumpTo(weiboProfileUrl)} />
+      {/* <img alt='weibo profile' src={weiboImg} onClick={() => openNewTabAndJumpTo(weiboProfileUrl)} /> */}
       <img alt='github profile' src={githubImg} onClick={() => openNewTabAndJumpTo(githubProfileUrl)} />
     </div>
   </div>

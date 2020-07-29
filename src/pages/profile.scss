@@ -1,0 +1,56 @@
+.profileContainer{
+    h4{
+      color: #18826a;
+      padding-bottom:20px;
+    }
+  .profile{
+    display: flex;
+    padding: 16px;
+    border: 3px solid #bdc1bd;
+    border-radius: 20px;
+    margin-bottom: 80px;
+
+    .mylogo{
+      border-radius: 20px;
+      width:256px;
+      height:256px;
+    }
+
+    .content{
+      padding: 5px 20px;
+      font-size: 18px;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      
+      div{
+        margin-top: 12px;
+      }
+    }
+  }
+  .contact{
+    .qrcode{
+        width:256px;
+        height:256px; 
+      }
+   .contactRow{
+     font-size: 18px;
+     margin-bottom: 20px;
+     display:flex;
+     padding-left: 20px;
+
+     a{
+       box-shadow: none;
+       &:hover{
+         box-shadow: 0 1px 0 0 currentColor;
+       }
+     }
+
+     span:first-child{
+        font-weight: bold;
+        width: 260px;
+        display: inline-block;
+      }
+    }
+  }  
+}
