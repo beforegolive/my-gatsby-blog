@@ -49,7 +49,8 @@ module.exports = {
 						resolve: `gatsby-remark-highlight-code`
 					}
 				]
-			}
+      },
+      pathFields:["cover"]
     },
     `gatsby-plugin-react-helmet`,
     {
@@ -76,7 +77,15 @@ module.exports = {
 				head: false
 			}
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    }
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,

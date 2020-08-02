@@ -6,10 +6,12 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Comments from '../components/comments'
 import { rhythm, scale } from '../utils/typography'
+import './blog-post.scss'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
 	const post = data.markdownRemark
-	const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title
+  const coverUrl = post.frontmatter.cover && post.frontmatter.cover.publicURL
 	const { previous, next } = pageContext
 
 	return (
@@ -20,6 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 			/>
 			<article>
 				<header>
+          <img src={coverUrl} className='cover' />
 					<h1
 						style={{
 							marginTop: rhythm(1),
@@ -96,7 +99,10 @@ export const pageQuery = graphql`
 			frontmatter {
 				title
 				date(formatString: "MMMM DD, YYYY")
-				description
+        description
+        cover {
+          publicURL
+        }
 			}
 		}
 	}

@@ -15,8 +15,7 @@ const Profile = ({location})=>{
       <div className='profile'>
         <img src={avatar} class='mylogo'></img>
         <section className='content'>本名许两会，2010年毕业于安徽大学计算机学院网络工程系，前端工程师，目前就职于Thoughtworks，工作地点在深圳。
-          <div>刚参加工作的那一两年写过一些技术博文，可惜没有坚持下来，后来重新捡起，希望能尽可能坚持的久一些。</div>
-          <div>博文会同步在segmentFault、掘金和个人公众号等3个平台。</div>
+          <div>每周分享一篇技术博文，博文会同步在segmentFault、掘金和个人公众号等3个平台。</div>
         </section>
       </div>
       <div className='contact'>

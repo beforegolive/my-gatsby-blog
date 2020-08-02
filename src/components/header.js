@@ -25,7 +25,7 @@ const Header=()=>{
     <div className='left'>
       <img alt='my logo' src={myLogoImg} className='myLogo' onClick={() => window.location.href = '/'} />
       <div onClick={()=>window.location.href='/'}>首页</div>
-      <div onClick={() => window.location.href = '/profile'}>关于我</div>
+      <div onClick={() => window.location.href = '/profile'}>关于</div>
     </div>
     <div className='right'>    
       <img alt='juejin profile' src={juejinImg} onClick={() => openNewTabAndJumpTo(juejinProfileUrl)} />

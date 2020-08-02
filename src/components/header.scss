@@ -3,7 +3,7 @@
   display: flex;
   box-shadow: 0px 2px 0px 0 rgba(0,0,0,0.05);
   padding: 8px 0;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 
   .left{
     flex:1;
@@ -12,7 +12,7 @@
     justify-content: flex-start;
     
     div{
-      margin-right: 8px;
+      margin-right: 12px;
       font-size: 20px;
       color:#666;
       font-weight: bold;
@@ -26,7 +26,7 @@
       height: 40px;
       border-radius: 25px;
       margin:0;
-      margin-right:10px;
+      margin-right:12px;
       cursor: pointer;
     }
   }
