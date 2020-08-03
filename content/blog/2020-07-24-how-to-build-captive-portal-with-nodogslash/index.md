@@ -13,9 +13,9 @@ cover: './cover.png'
 
 我工作地旁边的麦当劳wifi认证截图：
 
-![](https://user-gold-cdn.xitu.io/2020/7/24/1737ef087d8c450d?w=1080&h=2340&f=jpeg&s=72244)
+![](./captive-portal-麦当劳1.jpeg)
 
-![](https://user-gold-cdn.xitu.io/2020/7/24/1737ef0ad36721bf?w=1080&h=2340&f=jpeg&s=69542)
+![](./captive-portal-麦当劳2.jpeg)
 
 
 这种wifi的英文学名叫**Captive Portal**，在开源社区中早已存在一些组件可轻松搭建这种类型的wifi，比如wifiDog, CoovaChilli, nodogslash等。
@@ -24,7 +24,7 @@ cover: './cover.png'
 
 最终认证页面效果如下，点击按钮即完成认证：
 
-![](https://user-gold-cdn.xitu.io/2020/7/24/1737e5b0e88a8be8?w=1240&h=1106&f=png&s=353081)
+![](./captive-portal-自定义wifi入口页.png)
 
 ### wifi认证的机制和原理
 
@@ -37,15 +37,15 @@ cover: './cover.png'
 
 简单来说，wifi的认证过程通过一个HTTP GET请求即可完成。以我本文示例中使用的`nodogsplash`组件为例，其内部用C语言实现了一个服务器运行在2050端口。设备连上wifi时，wifi端会生成一个token，当设备被重定向到认证页面时，页面模板中包含此token，此时用户只需发送一个GET请求将此token传入到对应服务器的认证地址即可。
 
-![](https://user-gold-cdn.xitu.io/2020/7/24/1737e6d58639002a?w=1636&h=602&f=png&s=71017)
+![](./captive-portal-基本原理.png)
 
 如果你配置了FAS，也就是说设置了自定义认证机制，比如说你想添加了一个手机验证环节，需要用户填入手机和验证码才能完成认证。那么`nodogsplash`在重定向登录页面的时候会把一些重要参数附带在请求地址的后面，让你的自定义入口页能获取到这些认证凭证，比如token之类的参数。
 
-![](https://user-gold-cdn.xitu.io/2020/7/24/1737e8f0ce691329?w=706&h=1462&f=png&s=310187)
+![](./captive-portal-认证页面-highlight.png)
 
 等你的自定义验证手机验证通过了，再选择将token以HTTP GET请求发送回原2050端口上的认证服务器，整个流程如下图所示：
 
-![](https://user-gold-cdn.xitu.io/2020/7/24/1737e828bab6f58b?w=1762&h=1068&f=png&s=116808)
+![](./captive-portal-FAS后的原理.png)
 
 #### 认证站点的限制
 需要注意的是，当用户设备连上wifi但还尚未通过验证时，网络访问是受限的，此时能访问的内容取决于防火墙的设置。比如我上面示例中，将站点配置在路由器上，网站端口是8080，依赖的后端服务器运行在端口8081上，此时必须在`nodogsplash`的防火墙规则中开放这两个端口，才能让未认证的用户设备访问的到。假如服务器配置在外网，就要将对应的域名或IP在防火墙中开放出来，具体配置方式参考`nodogsplash`关于[FAS的文档](https://nodogsplash.readthedocs.io/en/v4.5.1/fas.html)。
@@ -297,11 +297,11 @@ sudo nodogsplash
 此时，用手机连接创建的wifi并输入密码以后，即可看到以下弹窗，要求登录认证。
 
 
-![](https://user-gold-cdn.xitu.io/2020/7/24/1737eecb43cc96b4?w=1080&h=2340&f=jpeg&s=59299)
+![](./captive-portal-wifi-popup.jpeg)
 
 点击登录后进入认证页面。
 
-![](https://user-gold-cdn.xitu.io/2020/7/24/1737eed8d34ef200?w=1080&h=2340&f=jpeg&s=86961)
+![](./captive-portal-splash-page.jpeg)
 
 
 ### [配置自定义wifi认证页面](#section-2)
@@ -325,7 +325,7 @@ fas_secure_enabled 0
 最后，呈现的样子如下，点击按钮即完成认证，顺利联网。
 
 
-![](https://user-gold-cdn.xitu.io/2020/7/24/1737e5b0e88a8be8?w=1240&h=1106&f=png&s=353081)
+![](./captive-portal-自定义wifi入口页.png)
 
 #### 备注：关于nodogsplash的版本
 > nodogsplash源码中的master分支指向的3.3.5版本，而此时最新版是5.0.0（笔者写此文章时间2020.7），越新的版本其文档越完善，但要注意的是4.5.1版本是一个分水岭，因为从4.5.1之后该项目的自定义登录授权功能被剥离到一个独立项目[openNDS](https://github.com/openNDS/openNDS)。
