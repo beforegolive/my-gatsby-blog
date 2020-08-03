@@ -2,6 +2,8 @@
 FILE_PATH=$1
 TITLE=$2
 PUBLISH_DATE=$3
+COVER_FILE=$4
+
 
 if [ -z "$FILE_PATH" ] 
 then
@@ -21,6 +23,14 @@ then
   exit 1
 fi
 
+if [ -z "$COVER_FILE" ]
+then 
+  echo "请指定文章封面图片路径"
+  exit 1
+fi
+
+
+
 TARGET_FOLDER="content/blog/$PUBLISH_DATE-$TITLE"
 
 echo $TARGET_FOLDER
@@ -28,9 +38,15 @@ mkdir -p $TARGET_FOLDER
 
 CHINESE_TITLE=$(basename $FILE_PATH .md)
 
+COVER_EXTENSION=$(echo $COVER_FILE| awk -F . '{print $NF}')
+
+TARGET_COVER_FILE="$TARGET_FOLDER/cover.$COVER_EXTENSION"
+cp $COVER_FILE $TARGET_COVER_FILE 
+
 echo "--- 
 title: '$CHINESE_TITLE' 
 date: '$PUBLISH_DATE'
+cover: './cover.$COVER_EXTENSION'
 --- 
 " | cat - $FILE_PATH > "$TARGET_FOLDER/index.md"  
 
