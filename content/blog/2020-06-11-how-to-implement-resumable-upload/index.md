@@ -1,6 +1,7 @@
 --- 
 title: 'web端断点续传的思路和实现' 
 date: '2020-06-11'
+cover: './cover.jpeg'
 --- 
 
 <!-- ---
@@ -18,7 +19,7 @@ title: ''
 
 [demo可以在此处下载](https://github.com/twomeetings/resumable-upload-demo)，另外，推荐使用chrome本身的网络限速来方便的测试断点续传功能。
 
-![chrome网络限速](https://user-gold-cdn.xitu.io/2020/6/11/172a060c655071e1?w=1338&h=510&f=png&s=179173)
+![chrome网络限速](./resumable-upload-1.jpeg)
 
 ### 前端部分
 框架选择上用了React作前端呈现，利用axois做网络请求，用js-md5来获取文件唯一性标识。
