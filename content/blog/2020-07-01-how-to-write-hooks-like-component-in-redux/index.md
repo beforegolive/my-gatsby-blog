@@ -43,7 +43,7 @@ export default connect(
 
 最终效果如下：
 
-![](https://user-gold-cdn.xitu.io/2020/7/1/1730795a97cf6eff?w=374&h=202&f=gif&s=28977)
+![](./redux-hooks-1.gif)
 
 那么，接下来我们尝试把这个组件重构成hooks风格的redux组件。
 
