@@ -45,9 +45,12 @@ deckgo-highlight-code {
 }
 
 a{
-  color:#17632b;
+  color:#317343f5;
+  box-shadow: none;
+
   &:hover{
     opacity: 0.8;
+    box-shadow: 0 1px 0 0 currentColor;
   }
 }
 
@@ -58,4 +61,14 @@ blockquote{
   p{
     color: #4a5d4a;
   }
+}
+
+code{
+  font-size: 0.85rem;
+  line-height: 1.75rem;
+  background-color: #46ce2d38;
+  border-radius: 10px;
+  padding: 5px 8px;
+  margin: 0 5px;
+  color: #3b3c3a;
 }
