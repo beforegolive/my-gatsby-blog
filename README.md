@@ -97,3 +97,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-blog)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+### TODO-List：
+1. 评论组件
+2. 博客界面重新设计
+3. 扩展gatsby功能

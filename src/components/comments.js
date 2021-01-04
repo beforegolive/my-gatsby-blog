@@ -5,11 +5,11 @@ import 'gitalk/dist/gitalk.css'
 export class Comments extends Component {
 	componentDidMount() {
 		const gitalk = new Gitalk({
-			clientID: '1d481fc0172197173fb8',
-			clientSecret: '887bb8f09c5d35f4bdd70044060ce9ba09663d73',
+			clientID: '51669cc516a1b3a3915c',
+			clientSecret: 'ca647b664e75cf0602e4826183465d8cdd312ab2',
 			repo: 'twomeetings.github.io',
-			owner: 'twomeetings',
-			admin: ['twomeetings'],
+			owner: 'beforegolive',
+			admin: ['beforegolive'],
 			id: window.location.pathname, // Ensure uniqueness and length less than 50
 			distractionFreeMode: false // Facebook-like distraction free mode
 		})
