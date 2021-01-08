@@ -27,16 +27,17 @@ const Layout = ({ children }) => {
 				marginLeft: `auto`,
 				marginRight: `auto`,
 				maxWidth: rhythm(32),
-				padding: `0 ${rhythm(1.5)} ${rhythm(3 / 4)}`,
+				padding: `0 ${rhythm(1.5)} ${rhythm(3 / 4)}`
 			}}
-      className='post-container'
+			className="post-container"
 		>
-      <Header></Header>
+			<Header></Header>
 			<main>{children}</main>
-			<footer className='footer'>
-				© {new Date().getFullYear()}, Built with
-				{` `}
-				<a href="https://www.gatsbyjs.org">Gatsby</a>,{` `}
+			<footer className="footer">
+				<span>© {new Date().getFullYear()} 深圳市悦初科技有限公司</span>
+				<span>粤ICP备2020110796号</span>
+				<span>Built with</span>
+				<a href="https://www.gatsbyjs.org">Gatsby</a>
 				<a href="https://gitalk.github.io/">Gitalk</a>
 			</footer>
 		</div>
