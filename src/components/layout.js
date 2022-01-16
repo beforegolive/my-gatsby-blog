@@ -1,26 +1,27 @@
-import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import React from 'react'
+// import { Link } from "gatsby"
 
-import Header from "./header"
-import { rhythm, scale } from "../utils/typography"
-import "./layout.scss"
+import { rhythm } from '../utils/typography'
+
+import Header from './header'
+import './layout.scss'
 
 const Layout = ({ children }) => {
-  useEffect(() => {
-    async function setHighlightCode() {
-      try {
-        const deckdeckgoHighlightCodeLoader = require("@deckdeckgo/highlight-code/dist/loader")
+  // useEffect(() => {
+  //   async function setHighlightCode() {
+  //     try {
+  //       const deckdeckgoHighlightCodeLoader = require("@deckdeckgo/highlight-code/dist/loader")
 
-        await deckdeckgoHighlightCodeLoader.defineCustomElements(window)
-      } catch (err) {
-        console.error(err)
-      }
-    }
+  //       await deckdeckgoHighlightCodeLoader.defineCustomElements(window)
+  //     } catch (err) {
+  //       console.error(err)
+  //     }
+  //   }
 
-    setHighlightCode()
-  })
+  //   setHighlightCode()
+  // })
 
-  const rootPath = `${__PATH_PREFIX__}/`
+  // const rootPath = `${__PATH_PREFIX__}/`
   return (
     <div
       style={{

@@ -1,5 +1,5 @@
 body {
-	background-color: #e8f1d8;
+  background-color: #f4f7ef;
 }
 
 h1,
@@ -8,83 +8,84 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: bold;
-	font-size: 22px;
-	color: #2d2727;
-	margin: 0;
-	margin: 40px 0 15px;
-	color: black;
-	letter-spacing: 0.6px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #2d2727;
+  margin: 0;
+  margin: 40px 0 15px;
+  color: black;
+  letter-spacing: 0.6px;
 }
 
 h1 {
-	font-size: 30px;
-	color: #193104;
+  font-size: 30px;
+  color: #193104;
 }
 
 h3 {
-	font-size: 26px;
-	border-bottom: 1px solid #aaa;
-	padding-bottom: 8px;
+  font-size: 26px;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 8px;
 }
 
 p {
-	font-size: 16px;
-	line-height: 1.8em;
-	color: #2d2727;
-	margin-bottom: 26px;
-	letter-spacing: 0.6px;
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #2d2727;
+  margin-bottom: 26px;
+  letter-spacing: 0.6px;
 }
 
 ol,
 ul {
-	list-style-position: inside;
+  list-style-position: inside;
 }
 
 deckgo-highlight-code {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .footer {
-	border-top: 1px solid #ccc;
-	padding-top: 10px;
-	margin-top: 80px;
-	font-size: 15px;
-	color: #777;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 80px;
+  font-size: 15px;
+  color: #777;
 
-	span {
-		padding-right: 16px;
-	}
-	a {
-		padding-right: 8px;
-	}
+  span {
+    padding-right: 16px;
+  }
+  a {
+    padding-right: 8px;
+  }
 }
 
 a {
-	color: #317343f5;
-	box-shadow: none;
+  color: #317343f5;
+  box-shadow: none;
+  text-decoration: underline;
 
-	&:hover {
-		opacity: 0.8;
-		box-shadow: 0 1px 0 0 currentColor;
-	}
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
 }
 
 blockquote {
-	margin-left: 0;
-	border-left: 0.32813rem solid hsla(141, 29%, 51%, 0.9);
+  margin-left: 0;
+  border-left: 0.32813rem solid hsla(141, 29%, 51%, 0.9);
 
-	p {
-		color: #4a5d4a;
-	}
+  p {
+    color: #4a5d4a;
+  }
 }
 
 code {
-	font-size: 0.85rem;
-	line-height: 1.75rem;
-	background-color: #46ce2d38;
-	border-radius: 10px;
-	padding: 5px 8px;
-	margin: 0 5px;
-	color: #3b3c3a;
+  font-size: 0.85rem;
+  line-height: 1.75rem;
+  background-color: #46ce2d38;
+  border-radius: 10px;
+  padding: 5px 8px;
+  margin: 0 5px;
+  color: #3b3c3a;
 }

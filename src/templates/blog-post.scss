@@ -1,6 +1,11 @@
-.cover{
-  width:100%;
-  margin:0;
-  padding:0;
+.cover {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   object-fit: contain;
+}
+.gatsby-highlight,
+img.gatsby-resp-image-image {
+  // border: 2px solid red;
+  box-shadow: 0 1px 10px #0002 !important;
 }

@@ -1,31 +1,29 @@
-import React from 'react'
+import * as React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 const NotFoundPage = ({ data, location }) => {
-	const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title
 
-	return (
-		<Layout location={location} title={siteTitle}>
-			<SEO title="404: Not Found" />
-			<h1>文章找不到了...Sorry</h1>
-			<p>
-				您可以<a href="/">点击此处</a>回到首页
-			</p>
-		</Layout>
-	)
+  return (
+    <Layout location={location} title={siteTitle}>
+      <Seo title="404: Not Found" />
+      <h1>404: Not Found</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </Layout>
+  )
 }
 
 export default NotFoundPage
 
 export const pageQuery = graphql`
-	query {
-		site {
-			siteMetadata {
-				title
-			}
-		}
-	}
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
 `

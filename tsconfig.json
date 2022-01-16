@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": ["node_modules", "build", "dist", "src/**/*.js", "src/**/*.jsx"]
+}

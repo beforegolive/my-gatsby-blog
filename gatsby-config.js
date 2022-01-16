@@ -1,93 +1,155 @@
 module.exports = {
-	siteMetadata: {
-		title: `上线前夕`,
-		author: {
-			name: `许两会`,
-			summary: `生活和工作在深圳的前端工程师。作为一名工程师，总要表达点什么。`
-		},
-		description: `A starter blog demonstrating what Gatsby can do.`,
-		siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-		social: {
-			github: `twomeetings`,
-			twitter: 'twomeetings'
-		}
-	},
-	plugins: [
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/content/blog`,
-				name: `blog`
-			}
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/content/assets`,
-				name: `assets`
-			}
-		},
-		{
-			resolve: `gatsby-transformer-remark`,
-			options: {
-				plugins: [
-					{
-						resolve: `gatsby-remark-images`,
-						options: {
-							maxWidth: 590
-						}
-					},
-					{
-						resolve: `gatsby-remark-responsive-iframe`,
-						options: {
-							wrapperStyle: `margin-bottom: 1.0725rem`
-						}
-					},
-					`gatsby-remark-copy-linked-files`,
-					`gatsby-remark-smartypants`,
-					{
-						resolve: `gatsby-remark-highlight-code`
-					}
-				]
-      },
-      pathFields:["cover"]
+  siteMetadata: {
+    title: `上线前夕`,
+    author: {
+      name: `上线前夕`,
+      summary: `人到中年，一路向前`,
     },
-    `gatsby-plugin-react-helmet`,
+    description: `个人技术博客，记录所思所想`,
+    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    social: {
+      github: `beforegolive`,
+      twitter: 'twomeetings',
+    },
+  },
+  plugins: [
+    `gatsby-plugin-image`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        pathToConfigModule: `src/utils/typography`
-      }
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
     },
-		`gatsby-plugin-feed`,
-		{
-			resolve: `gatsby-plugin-manifest`,
-			options: {
-				start_url: `/`,
-				background_color: `#ffffff`,
-				theme_color: `#663399`,
-				display: `minimal-ui`,
-        icon: `./content/assets/myLogo.jpeg`
-			}
-		},
-		{
-			resolve: `gatsby-plugin-baidu-tongji`,
-			options: {
-				siteid: '7d972948fda682a44dfb490ed2060bb6',
-				head: false
-			}
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    `gatsby-plugin-eslint`,
+    // {
+    //   resolve: "gatsby-plugin-eslint",
+    //   options: {
+    //     rulePaths: [gatsbyRequiredRules],
+    //     // Default settings that may be ommitted or customized
+    //     stages: ["develop"],
+    //     extensions: ["js", "jsx", "ts", "tsx"],
+    //     exclude: ["node_modules", "bower_components", ".cache", "public"],
+    //     // Any additional eslint-webpack-plugin options below
+    //     // Any additional eslint-webpack-plugin options below
+    //     // ...
+    //   },
+    // },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark }}) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ 'content:encoded': node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'Gatsby Starter Blog RSS Feed',
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Starter Blog`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
     },
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 75,
-      },
-    }
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// `gatsby-plugin-offline`,
-	]
+    `gatsby-plugin-react-helmet`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
+  ],
 }
