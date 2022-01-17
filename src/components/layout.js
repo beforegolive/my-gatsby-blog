@@ -1,5 +1,6 @@
 import React from 'react'
 // import { Link } from "gatsby"
+// import Helmet from 'react-helmet'
 
 import { rhythm } from '../utils/typography'
 
@@ -32,6 +33,9 @@ const Layout = ({ children }) => {
       }}
       className="post-container"
     >
+      {/* <Helmet>
+        <script src=
+      </Helmet> */}
       <Header></Header>
       <main>{children}</main>
       <footer className="footer">

@@ -7,6 +7,7 @@ import Seo from '../components/seo'
 // import Comments from "../components/comments"
 import { rhythm, scale } from '../utils/typography'
 import './blog-post.scss'
+import Comments from '../components/comments'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -76,7 +77,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </nav>
-      {/* <Comments /> */}
+      <Comments />
     </Layout>
   )
 }
