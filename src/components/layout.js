@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
         </span>
         <span>Built with</span>
         <a href="https://www.gatsbyjs.org">Gatsby</a>
-        <a href="https://gitalk.github.io/">Gitalk</a>
+        <a href="https://twikoo.js.org/">Twikoo</a>
       </footer>
     </div>
   )
