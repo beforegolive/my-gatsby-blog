@@ -14,7 +14,7 @@ const openNewTabAndJumpTo = url => {
 const Header = () => {
   const sfProfileUrl = `https://segmentfault.com/u/shangxianqianxi`
   const juejinProfileUrl = `https://juejin.im/user/5cc544fdf265da03867e5a14`
-  const githubProfileUrl = `https://github.com/twomeetings`
+  const githubProfileUrl = `https://github.com/beforegolive`
   // const weiboProfileUrl=``
 
   return (

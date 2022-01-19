@@ -123,4 +123,4 @@ import shared from 'shared'
 
 > [lerna的github地址](https://github.com/lerna/lerna)
 
-> [文章中的demo](https://gitlab.com/twomeetings/lerna-demo)
+> [文章中的demo](https://gitlab.com/beforegolive/lerna-demo)

@@ -17,7 +17,7 @@ title: ''
 4. 比对文件大小，计算续传的开始节点
 5. 自定制对文件的保存方法，确保异常终止时也能将未传完文件保存下来
 
-[demo可以在此处下载](https://github.com/twomeetings/resumable-upload-demo)，另外，推荐使用chrome本身的网络限速来方便的测试断点续传功能。
+[demo可以在此处下载](https://github.com/beforegolive/resumable-upload-demo)，另外，推荐使用chrome本身的网络限速来方便的测试断点续传功能。
 
 ![chrome网络限速](./resumable-upload-1.jpeg)
 

@@ -59,7 +59,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "deploy-github": "npm run build && gh-pages -d public -b master -r git@github.com:twomeetings/twomeetings.github.io.git",
+    "deploy-github": "npm run build && gh-pages -d public -b master -r git@github.com:beforegolive/twomeetings.github.io.git",
     "develop": "gatsby develop",
     "predeploy": "npm run build",
     "deploy": "NODE_ENV=production tcb hosting:deploy ./public/ -e myblog-2g4y35r1e15c5506",

@@ -100,4 +100,4 @@ danger可以在合并代码时提供自定义的合并规则，能规范整个�
 
 > [dangerjs官网](https://danger.systems/js/)
 
-> [文章中的PR地址](https://github.com/twomeetings/lerna-example/pull/3)
+> [文章中的PR地址](https://github.com/beforegolive/lerna-example/pull/3)
