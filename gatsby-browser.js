@@ -8,5 +8,3 @@ import './src/style.css'
 
 // Highlighting for code blocks
 import 'prismjs/themes/prism.css'
-
-// import './src/utils/twikoo.1.4.15.min'
